@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { ethers } from 'ethers';
-import { StoryProtocol } from '@story-protocol/core-sdk';
+import { StoryProtocol } from '@storyprotocol/sdk';
 import dotenv from 'dotenv';
 
 dotenv.config();
