@@ -43,26 +43,46 @@ app.post('/api/register-ai-agent', async (req: Request, res: Response) => {
       name,
       description,
       ownerAddress,
-      aiMetadata = {}
+      ownerName = "AI Agent Creator",
+      imageUrl,
+      imageHash,
+      mediaUrl,
+      mediaHash,
+      mediaType = "image/webp",
+      characterFileUrl,
+      characterFileHash,
+      tags = ["AI Agent"],
+      additionalMetadata = {}
     } = req.body;
 
     if (!name || !description || !ownerAddress) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // Create IP metadata for AI Agent
+    // Create IP metadata for AI Agent following Story Protocol documentation
     const ipMetadata = {
       title: name,
       description: description,
       createdAt: Math.floor(Date.now() / 1000).toString(),
       creators: [{
-        name: "AI Agent Creator",
+        name: ownerName,
         address: ownerAddress,
         contributionPercent: 100
       }],
+      // Optional media fields
+      ...(imageUrl && { image: imageUrl }),
+      ...(imageHash && { imageHash }),
+      ...(mediaUrl && { mediaUrl }),
+      ...(mediaHash && { mediaHash }),
+      ...(mediaType && { mediaType }),
+      // AI Agent specific metadata
+      aiMetadata: {
+        ...(characterFileUrl && { characterFileUrl }),
+        ...(characterFileHash && { characterFileHash }),
+        ...additionalMetadata
+      },
       ipType: "AI Agent",
-      tags: ["AI Agent"],
-      aiMetadata: aiMetadata
+      tags: Array.isArray(tags) ? tags : ["AI Agent"]
     };
 
     // Register AI Agent as IP
