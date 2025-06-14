@@ -1,6 +1,7 @@
 import { ChakraProvider, Box } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import RegisterAIAgent from './components/RegisterAIAgent'
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           
           <Routes>
             <Route path="/" element={<RegisterAIAgent />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </Box>
       </Router>
