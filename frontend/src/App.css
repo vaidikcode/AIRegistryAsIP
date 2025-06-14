@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.link {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 500;
+}
