@@ -4,6 +4,7 @@ import RegisterAIAgent from './components/RegisterAIAgent'
 import Dashboard from './components/Dashboard'
 import Marketplace from './components/Marketplace'
 import Services from './components/Services'
+import Settings from './components/Settings'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/marketplace" element={<Marketplace />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </Box>
       </Router>
