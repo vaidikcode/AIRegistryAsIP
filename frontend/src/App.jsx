@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import RegisterAIAgent from './components/RegisterAIAgent'
 import Dashboard from './components/Dashboard'
 import Marketplace from './components/Marketplace'
+import Services from './components/Services'
+
 function App() {
   return (
     <ChakraProvider>
@@ -18,6 +20,7 @@ function App() {
             <Route path="/" element={<RegisterAIAgent />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </Box>
       </Router>

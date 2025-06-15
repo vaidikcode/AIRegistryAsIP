@@ -43,7 +43,7 @@ const Marketplace: React.FC = () => {
     "education",
   ]
 
-  // Mock marketplace data
+  // Mock daata
   const mockAgents: MarketplaceAgent[] = [
     {
       id: "mp1",
@@ -133,7 +133,7 @@ const Marketplace: React.FC = () => {
   ]
 
   useEffect(() => {
-    // Simulate API call
+    // API call
     const timer = setTimeout(() => {
       setAgents(mockAgents)
       setIsLoading(false)
