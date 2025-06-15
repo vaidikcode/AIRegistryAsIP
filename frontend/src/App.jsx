@@ -5,7 +5,9 @@ import Dashboard from './components/Dashboard'
 import Marketplace from './components/Marketplace'
 import Services from './components/Services'
 import Settings from './components/Settings'
-import Footer from './components/Footer'  
+import Footer from './components/Footer'
+import Header from './components/Header'
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
     <ChakraProvider>
       <Router>
         <Box minH="100vh" bg="gray.50">
+          <Header />
           <Box as="nav" bg="linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)" p={4} shadow="sm">
             <Link to="/" style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3182CE' }}>
               AI Registry as IP...ts name so unblvly tuff twn :3....💔🥀

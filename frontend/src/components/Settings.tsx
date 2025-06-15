@@ -37,9 +37,9 @@ const Settings: React.FC = () => {
 
   const [profile, setProfile] = useState<UserProfile>({
     name: "WHY DID YOU REDEEM IT",
-    email: "anything_for_rupees@example.com",
+    email: "anything_fors@example.com",
     walletAddress: "0x1234567890abcdef1234567890abcdef12345678",
-    ensName: "pajeet.eth",
+    ensName: "hello.eth",
     bio: "AI researcher and blockchain enthusiast. Building the future of decentralized AI.",
   })
 
