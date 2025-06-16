@@ -1,0 +1,27 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtualenv
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# OS trash
+.DS_Store
+Thumbs.db
+
+# Uvicorn log cache or temp
+*.log
+
+# dotenv for secrets (if using)
+.env
+
+# Token leaks prevention
+token.txt
+secret.json
+*.secret
+*.key
