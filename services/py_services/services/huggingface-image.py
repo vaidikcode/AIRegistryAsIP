@@ -1,6 +1,3 @@
-#todo Aryan
-# huggingface_image.py - FastAPI service for handling Hugging Face image generation
-
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, StreamingResponse, Response
 import requests
@@ -33,7 +30,6 @@ async def handle_huggingface_image(req: Request):
         if not token:
             return JSONResponse(status_code=400, content={"error": "Missing required parameter: token (API key)", "success": False})
 
-        # Determine which API to use
         is_nebius = (url and "nebius" in url) or (model and "nebius" in model)
 
         if is_nebius:
